@@ -29,20 +29,19 @@ int height(const binary_tree_t *tree)
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	int is_perfect_l, is_perfect_r;
 
-	int is_perfect_l, is_perfect_r, height_l, height_r;
-
-	if (tree == NULL || tree->left == NULL || tree->right == NULL)
+	if (tree == NULL)
 		return (0);
 
-	else if (tree->left == NULL && tree->right == NULL)
+	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
-	height_l = height(tree->left);
-	height_r = height(tree->right);
+	else if (tree->left == NULL || tree->right == NULL)
+		return (0);
 
-	if (height_l == height_r)
-		return (1);
+	if (height(tree->left) != height(tree->right))
+		return (0);
 
 	is_perfect_l = binary_tree_is_perfect(tree->left);
 	is_perfect_r = binary_tree_is_perfect(tree->right);
