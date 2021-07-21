@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_leaves - from node, count number of leaves
+ * binary_tree_leaves - count number child of leaves
  * @tree: chosen node
  * Return: number of leaves
  */
