@@ -1,5 +1,11 @@
 #include "binary_trees.h"
 
+/**
+ * binary_tree_height - count binary tree height
+ * @tree: actual node
+ * Return: biggest height from left or from right
+ */
+
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t height_l;
